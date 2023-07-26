@@ -1,9 +1,10 @@
-package Exercise2;
+/*Group 17 Eong Koungmeng*/
+
 
 import java.util.InputMismatchException;
 import java.util.Scanner; 
 
-public class Exercise2
+public class Exercise02
 {
 	public static void main(String[] args)
 	{

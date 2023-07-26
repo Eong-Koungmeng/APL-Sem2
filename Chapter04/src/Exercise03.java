@@ -1,6 +1,7 @@
-package Exercise3;
+/*Group 17 Eong Koungmeng*/
 
-public class Exercise3
+
+public class Exercise03
 {
 	public static boolean isHex(String str)
 	{
@@ -90,7 +91,7 @@ public class Exercise3
 	
 	public static void main(String[] args)
 	{
-		String hex = "128382.1";
+		String hex = "34eaf.281.a";
 		try
 		{
 			System.out.println("Binary: "+hex2Binary(hex));			

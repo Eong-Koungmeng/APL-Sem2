@@ -1,8 +1,9 @@
-package Exercise4;
+/*Group 17 Eong Koungmeng*/
+
 
 import java.io.FileReader;
 
-public class Exercise4
+public class Exercise04
 {
 	public static void main(String[] args)
 	{
@@ -46,7 +47,5 @@ public class Exercise4
 		System.out.println("Number of characters: "+charactersCount);
 		System.out.println("Number of words: " + wordsCount);
 		System.out.println("Number of lines: " + linesCount);
-		
-		
 	}
 }

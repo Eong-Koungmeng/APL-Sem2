@@ -1,9 +1,10 @@
-package Exercise5;
+/*Group 17 Eong Koungmeng*/
+
 
 import java.util.Scanner;
 import java.io.FileReader;
 
-public class Exercise5
+public class Exercise05
 {
 	public static void main(String[] args)
 	{
@@ -34,6 +35,7 @@ public class Exercise5
 			}
 			
 			reader.close();
+			input.close();
 		}
 		catch(Exception e)
 		{

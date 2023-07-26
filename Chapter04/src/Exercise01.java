@@ -1,7 +1,8 @@
-package Exercise1;
+/*Group 17 Eong Koungmeng*/
+
 import java.util.Scanner;
 
-public class Exercise1
+public class Exercise01
 {
 	public static void main(String[] args)
 	{

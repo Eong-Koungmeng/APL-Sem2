@@ -1,0 +1,5 @@
+001	Koungmeng	3500.0	1234
+002	Jotaro Kujo	1100.0	jolyne
+003	John	1000.0	johnny
+004	Kosaki	3000.0	onodera23
+005	Kongming	7600	zhugedragon
