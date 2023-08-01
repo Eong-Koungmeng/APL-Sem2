@@ -1,0 +1,5 @@
+1,Koungmeng,M,12/01/1976,012989087,Siem Reap,2,8,Bachelor,1
+2,Johnny,M,21/11/2003,092183756,Phnom Penh,3,9,Master,2
+3,Jotaro,F,28/10/2017,029837261,Tokyo,3,7,Bachelor,3
+4,Jonathan,M,12/03/2001,039483921,England,1,6,Master,4
+3,Kosaki,F,14/07/2002,087234864,China,2,9,Phd,5

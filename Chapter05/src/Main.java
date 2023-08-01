@@ -6,13 +6,16 @@ public class Main
 	static Scanner input;
 	public static void main(String[] args) throws IOException
 	{
-		Program[] programList = {new ManageFaculty()};
+		Program[] programList = {new ManageFaculty(), new ManageDepartment(), new ManageStudent(), new EnrollStudent()};
 		input = new Scanner(System.in);
 		boolean running = true;
 		
 		while(running)
 		{
-			System.out.println("\nMenu\n1. Manage Faculty");
+			System.out.println("\nMenu\n1. Manage Faculties");
+			System.out.println("2. Manage Departments");
+			System.out.println("3. Manage Students");
+			System.out.println("4. Enroll Students into Departments");
 			System.out.println("10. Exit");
 			
 			System.out.print("Enter a feature: ");

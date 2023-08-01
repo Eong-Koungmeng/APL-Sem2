@@ -14,11 +14,11 @@ public class ManageFaculty implements Program
 	
 	ManageFaculty() throws IOException
 	{
-		LoadData();
+		loadFacultyData();
 	}
 	
 	//For loading data
-	void LoadData() throws IOException
+	void loadFacultyData() throws IOException
 	{
 		File file = new File(fileName);
 		if(!file.exists())
@@ -117,9 +117,7 @@ public class ManageFaculty implements Program
 				{
 					if(line.split(",")[0].equals(idToUpdate))
 					{
-						
-						System.out.print("Enter faculty ID: ");
-						fa.FacultyID = Main.input.nextLine();
+						fa.FacultyID = idToUpdate;
 						System.out.print("Enter faculty name: ");
 						fa.FacultyName = Main.input.nextLine();
 						System.out.print("Enter dean name: ");
@@ -208,7 +206,7 @@ public class ManageFaculty implements Program
 		while(running)
 		{
 			System.out.println("\na. Add a new faculty");
-			System.out.println("b. Search employee by id");
+			System.out.println("b. Search faculty by id");
 			System.out.println("c. Update a faculty");
 			System.out.println("d. Delete a faculty by id");
 			System.out.println("e. Display all faculties");
