@@ -62,7 +62,7 @@ public class ManageStudent implements Program
 		stu.StudentID = Main.input.nextLine();
 		System.out.print("Enter student name: ");
 		stu.StudentName = Main.input.nextLine();
-		System.out.print("Enter gender name: ");
+		System.out.print("Enter gender: ");
 		stu.Gender = Main.input.nextLine();
 		System.out.print("Enter DOB: ");
 		stu.DOB = Main.input.nextLine();
@@ -139,11 +139,9 @@ public class ManageStudent implements Program
 					if(line.split(",")[0].equals(idToUpdate))
 					{
 						stu.StudentID = idToUpdate;
-						System.out.print("Enter student ID: ");
-						stu.StudentID = Main.input.nextLine();
 						System.out.print("Enter student name: ");
 						stu.StudentName = Main.input.nextLine();
-						System.out.print("Enter gender name: ");
+						System.out.print("Enter gender: ");
 						stu.Gender = Main.input.nextLine();
 						System.out.print("Enter DOB: ");
 						stu.DOB = Main.input.nextLine();
@@ -159,8 +157,8 @@ public class ManageStudent implements Program
 						stu.Degree = Main.input.nextLine();
 						System.out.print("Enter accountID: ");
 						stu.AccountID = Main.input.nextLine();
-						line = stu.StudentID + ',' + stu.StudentName + ',' + stu.Gender+ ',' + stu.PhoneNo
-								+stu.Address+stu.Year+stu.Generation+stu.Degree+stu.AccountID+'\n';
+						line = stu.StudentID + ',' + stu.StudentName + ',' + stu.Gender+ ',' + stu.DOB+','+stu.PhoneNo + ','+
+								stu.Address+','+stu.Year+','+stu.Generation+','+stu.Degree+','+stu.AccountID;
 					}
 					
 					fileContent+=line+'\n';
