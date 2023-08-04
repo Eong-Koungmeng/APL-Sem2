@@ -6,7 +6,8 @@ public class Main
 	static Scanner input;
 	public static void main(String[] args) throws IOException
 	{
-		Program[] programList = {new ManageFaculty(), new ManageDepartment(), new ManageStudent(), new EnrollStudent(), new ManageCourse(), new ManageTeacher()};
+		Program[] programList = {new ManageFaculty(), new ManageDepartment(), new ManageStudent(), new EnrollStudent(), 
+				new ManageCourse(), new ManageTeacher(), new AssignCourseToTeacher()};
 		input = new Scanner(System.in);
 		boolean running = true;
 		
@@ -18,6 +19,7 @@ public class Main
 			System.out.println("4. Enroll Students into Departments");
 			System.out.println("5. Manage Courses");
 			System.out.println("6. Manage Teachers");
+			System.out.println("7. Assign Courses to Teachers");
 			System.out.println("10. Exit");
 			
 			System.out.print("Enter a feature: ");

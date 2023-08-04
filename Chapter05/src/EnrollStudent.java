@@ -39,7 +39,7 @@ public class EnrollStudent implements Program
 				wordsArray = line.split(",");
 				DepartmentStudentDetail dsd = new DepartmentStudentDetail();
 				dsd.DeptID = wordsArray[0];
-				dsd.StudentID = wordsArray[0];
+				dsd.StudentID = wordsArray[1];
 				
 				dsdList.add(dsd);
 			}
@@ -52,7 +52,7 @@ public class EnrollStudent implements Program
 		DepartmentStudentDetail dsd = new DepartmentStudentDetail();
 		System.out.print("Enter student ID to enroll: ");
 		dsd.StudentID = Main.input.nextLine();
-		System.out.print("Enter departmet ID for student: ");
+		System.out.print("Enter department ID for student: ");
 		dsd.DeptID = Main.input.nextLine();
 		
 		FileWriter writer = new FileWriter(fileName,true);
@@ -69,7 +69,7 @@ public class EnrollStudent implements Program
 	{
 		System.out.print("Enter student ID to delete: ");
 		String studentID = Main.input.nextLine();
-		System.out.print("Enter departmet ID for student: ");
+		System.out.print("Enter department ID for student: ");
 		String deptID = Main.input.nextLine();
 		
 		for(int i = 0; i<dsdList.size();i++)
@@ -86,7 +86,7 @@ public class EnrollStudent implements Program
 				//ignore faculty
 				while((line=reader.readLine())!=null)
 				{
-					if(line.split(",")[0].equals(studentID) && line.split(",")[0].equals(deptID))
+					if(line.split(",")[0].equals(studentID) && line.split(",")[1].equals(deptID))
 					{
 						continue;
 					}
@@ -176,7 +176,7 @@ public class EnrollStudent implements Program
 			return;
 		}
 		
-		System.out.println("Students " + studentName + " enrolled in department");
+		System.out.println("Student " + studentName + " enrolled in department");
 		System.out.println("-----------------------------------------------------------------------");
 		System.out.printf("%-12s %-15s %-15s %-15s %-15s\n", "DeptID", "DeptName", "HeadName", "OfficeNo", "FacultyID");
 		System.out.println("-----------------------------------------------------------------------");
