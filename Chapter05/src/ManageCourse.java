@@ -123,6 +123,7 @@ public class ManageCourse implements Program
 						System.out.print("Enter credit: ");
 						course.Credit = Main.input.nextLine();
 						System.out.print("Enter type: ");
+						course.Type = Main.input.nextLine();
 						line = course.CourseID + ',' + course.CourseName + ',' + course.Credit + ',' + course.Type;
 					}
 					

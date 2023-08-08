@@ -164,6 +164,20 @@ public class AssignCourseToTeacher implements Program
 		System.out.println("-----------------------------------------------------------------------");
 	}
 	
+	
+	void displayTeacherCourseDetail()
+	{
+		System.out.println("----------------------");
+		System.out.printf("%-12s %-18s\n", "TeacherID", "CourseID");
+		System.out.println("----------------------");
+		
+		for(int i = 0; i <teacherDetailList.size();i++)
+		{
+			System.out.printf("%-12s %-18s\n", teacherDetailList.get(i).TeacherID, teacherDetailList.get(i).CourseID);
+		}
+		System.out.println("----------------------");
+	}
+	
 	public void Update() throws IOException
 	{
 		while(running)
@@ -172,7 +186,8 @@ public class AssignCourseToTeacher implements Program
 			System.out.println("b. Remove a course from a teacher");
 			System.out.println("c. Display all courses taught by a teacher");
 			System.out.println("d. Display teacher and course tables");
-			System.out.println("e. Exit the program");
+			System.out.println("e. Display teacher course detail");
+			System.out.println("f. Exit the program");
 			System.out.print("Enter a feature: ");
 			char inputChar = Main.input.nextLine().charAt(0);
 			
@@ -191,6 +206,9 @@ public class AssignCourseToTeacher implements Program
 				displayTeacherDetail();
 				break;
 			case 'e':
+				displayTeacherCourseDetail();
+				break;
+			case 'f':
 				running = false;
 				break;
 			}

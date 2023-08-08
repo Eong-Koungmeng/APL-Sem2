@@ -52,11 +52,11 @@ public class EnrollStudent implements Program
 		DepartmentStudentDetail dsd = new DepartmentStudentDetail();
 		System.out.print("Enter student ID to enroll: ");
 		dsd.StudentID = Main.input.nextLine();
-		System.out.print("Enter department ID for student: ");
+		System.out.print("Enter department ID: ");
 		dsd.DeptID = Main.input.nextLine();
 		
 		FileWriter writer = new FileWriter(fileName,true);
-		writer.write(dsd.StudentID + ',' + dsd.DeptID + '\n');
+		writer.write(dsd.DeptID + ',' + dsd.StudentID + '\n');
 		writer.close();
 		
 		//store new dsd
@@ -86,7 +86,7 @@ public class EnrollStudent implements Program
 				//ignore faculty
 				while((line=reader.readLine())!=null)
 				{
-					if(line.split(",")[0].equals(studentID) && line.split(",")[1].equals(deptID))
+					if(line.split(",")[0].equals(deptID) && line.split(",")[1].equals(studentID))
 					{
 						continue;
 					}
@@ -102,7 +102,7 @@ public class EnrollStudent implements Program
 				
 				dsdList.remove(i);
 				
-				System.out.println("Deleted a department");
+				System.out.println("Deleted a student from department");
 				return;
 			}
 		}
@@ -206,6 +206,20 @@ public class EnrollStudent implements Program
 		md.displayDepartment();
 	}
 	
+	void displayStudentEnrollment()
+	{
+		System.out.println("-----------------------");
+		System.out.printf("%-12s %-18s\n", "DeptID", "StudentID");
+		System.out.println("-----------------------");
+		
+		for(int i = 0; i <dsdList.size();i++)
+		{
+			System.out.printf("%-12s %-18s\n", dsdList.get(i).DeptID, dsdList.get(i).StudentID);
+		}
+		System.out.println("-----------------------");
+		
+	}
+	
 	public void Update() throws IOException
 	{
 		while(running)
@@ -215,7 +229,8 @@ public class EnrollStudent implements Program
 			System.out.println("c. Display all student study at given department");
 			System.out.println("d. Diplay all department studied by given student");
 			System.out.println("e. Diplay department and student table");
-			System.out.println("f. Exit the program");
+			System.out.println("f. Diplay student enrollments");
+			System.out.println("g. Exit the program");
 			System.out.print("Enter a feature: ");
 			char inputChar = Main.input.nextLine().charAt(0);
 			
@@ -237,6 +252,9 @@ public class EnrollStudent implements Program
 				diplayStudentAndDepartment();
 				break;
 			case 'f':
+				displayStudentEnrollment();
+				break;
+			case 'g':
 				running = false;
 				break;
 			}

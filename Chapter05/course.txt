@@ -1,3 +1,4 @@
 1,Discrete Math,4,Lecture
 2,Data Comm,3,Lecture
 3,Database,4,Lab
+4,APL,3,Lab
